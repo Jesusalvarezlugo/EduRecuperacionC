@@ -28,5 +28,12 @@ namespace EduRecuperacionC.Dtos
         public string DireccionAlumno { get => direccionAlumno; set => direccionAlumno = value; }
         public string TelefonoAlumno { get => telefonoAlumno; set => telefonoAlumno = value; }
         public string EmailAlumno { get => emailAlumno; set => emailAlumno = value; }
+
+        override
+            public string ToString()
+        {
+            string texto = "Nombre: " + this.nombreAlumno;
+            return texto;
+        }
     }
 }

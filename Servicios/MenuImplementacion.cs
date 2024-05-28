@@ -10,16 +10,28 @@ namespace EduRecuperacionC.Servicios
     {
         public int mostarMenuYSeleccion()
         {
-            int opcion;
+            
+            try
+            {
+                int opcion;
 
-            Console.WriteLine("#################");
-            Console.WriteLine("0. Cerrar Menu");
-            Console.WriteLine("1. Alta de objeto");
-            Console.WriteLine("\"#################\"");
-            Console.WriteLine("elija una opcion: ");
-            opcion=Console.ReadKey(true).KeyChar - ('0');
+                Console.WriteLine("#################");
+                Console.WriteLine("0. Cerrar Menu");
+                Console.WriteLine("1. Alta de alumno nuevo");
+                Console.WriteLine("#################");
+                Console.WriteLine("elija una opcion: ");
+                opcion = Console.ReadKey(true).KeyChar - ('0');
+                return opcion;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            
 
-            return opcion;
+            
+
+            
         }
     }
 }

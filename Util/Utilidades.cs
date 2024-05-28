@@ -10,12 +10,22 @@ namespace EduRecuperacionC.Util
     {
         public static  string crearNombreLog()
         {
-            DateTime fechaActual= DateTime.Today;
-            
+            string nombreCompletoFichero="9";
+            try
+            {
+                DateTime fechaActual = DateTime.Today;
 
-            string nombreCompletoFichero=String.Concat("log-",fechaActual.ToString("ddMMyy"),".txt");
+                 nombreCompletoFichero = String.Concat("log-", fechaActual.ToString("ddMMyy"), ".txt");
+
+                
+            }catch (Exception ex)
+            {
+                throw;
+            }
 
             return nombreCompletoFichero;
+
+
         }
     }
 }

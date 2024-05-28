@@ -8,14 +8,33 @@ using System.Threading.Tasks;
 
 namespace EduRecuperacionC.Servicios
 {
+    /// <summary>
+    /// Clase para la operativa de los ficheros
+    /// </summary>
     internal class FicheroImplementacion : FicheroInterfaz
     {
         public void escribirFicheroLog(string texto)
         {
-            StreamWriter escritor = new StreamWriter(Program.rutaFicheroLog);
+            StreamWriter escritor = null;
+            try
+            {
+                escritor = new StreamWriter(Program.rutaFicheroLog, true);
 
-            escritor.WriteLine(texto);
-            escritor.Close();
+                escritor.WriteLine(texto);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Error al escribir en el fichero");
+            }          
+            finally
+            {
+                if( escritor != null )
+                {
+                    escritor.Close();
+                }
+            }
+            
+            
         }
     }
 }
