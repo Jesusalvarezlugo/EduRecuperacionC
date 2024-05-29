@@ -1,4 +1,5 @@
 ﻿using EduRecuperacionC.Controladores;
+using EduRecuperacionC.Dtos;
 using EduRecuperacionC.Util;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,19 @@ namespace EduRecuperacionC.Servicios
             }
             
             
+        }
+
+        public void listarAlumnosEnFichero()
+        {
+            string rutaArchivo = "ListaAlumnos.txt";
+            StreamWriter escritor = new StreamWriter(rutaArchivo,true);
+
+            foreach(AlumnoDto alumno in Program.listaAlumnos)
+            {
+                escritor.WriteLine(alumno.ToString(';'));
+            }
+
+            escritor.Close();
         }
     }
 }

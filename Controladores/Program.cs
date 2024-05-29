@@ -52,6 +52,16 @@ namespace EduRecuperacionC.Controladores
                             }
                             break;
 
+                        case 2:
+                            fi.escribirFicheroLog("[INFO] Se dara de baja un alumno .");
+                            oi.darBajaAlumno();
+                            break;
+
+                        case 3:
+                            fi.escribirFicheroLog("[INFO] Se escribira en fichero los alumnos .");
+                            fi.listarAlumnosEnFichero();
+                            break;
+
                         default:
                             Console.WriteLine("[ERROR] Opcion introducida no valida");
                             

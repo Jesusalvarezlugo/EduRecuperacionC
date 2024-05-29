@@ -77,5 +77,37 @@ namespace EduRecuperacionC.Servicios
             
             
         }
+
+        public void darBajaAlumno()
+        {
+            string dniAPedir;
+            int contador = 0;
+            Console.WriteLine("Introduzca el dni del alumno a dar de baja: ");
+            dniAPedir = Console.ReadLine();
+            AlumnoDto aux=new AlumnoDto();
+
+            foreach(AlumnoDto alumno  in Program.listaAlumnos)
+            {
+                if (alumno.DniAlumno.Equals(dniAPedir))
+                {
+                    contador = 1;
+                    aux = alumno;
+                    break;
+                }
+
+                
+            }
+
+            if (contador == 0)
+            {
+                Console.WriteLine("No se encontro al alumno.");
+            }
+            else
+            {
+                Program.listaAlumnos.Remove(aux);
+            }
+            
+
+        }
     }
 }

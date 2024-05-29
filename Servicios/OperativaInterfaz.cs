@@ -12,5 +12,7 @@ namespace EduRecuperacionC.Servicios
         /// Metodo para dar de alta a un alumno
         /// </summary>
         public void darAltaAlumno();
+
+        public void darBajaAlumno();
     }
 }

@@ -18,6 +18,8 @@ namespace EduRecuperacionC.Servicios
                 Console.WriteLine("#################");
                 Console.WriteLine("0. Cerrar Menu");
                 Console.WriteLine("1. Alta de alumno nuevo");
+                Console.WriteLine("2. baja de alumno ");
+                Console.WriteLine("3. escribir alumnos en fichero ");
                 Console.WriteLine("#################");
                 Console.WriteLine("elija una opcion: ");
                 opcion = Console.ReadKey(true).KeyChar - ('0');

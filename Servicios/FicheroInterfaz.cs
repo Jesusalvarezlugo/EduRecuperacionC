@@ -16,5 +16,7 @@ namespace EduRecuperacionC.Servicios
         /// </summary>
         /// <param name="texto"></param>
         public void escribirFicheroLog(string texto);
+
+        public void listarAlumnosEnFichero();
     }
 }

@@ -32,7 +32,15 @@ namespace EduRecuperacionC.Dtos
         override
             public string ToString()
         {
-            string texto = "Nombre: " + this.nombreAlumno;
+            string texto = "DNI: "+this.dniAlumno+" - "+this.nombreAlumno;
+            return texto;
+        }
+
+        public string ToString(char puntoYComa)
+        {
+            //Dni;Nombre
+            
+            string texto=String.Concat(this.dniAlumno,puntoYComa,this.nombreAlumno);
             return texto;
         }
     }
