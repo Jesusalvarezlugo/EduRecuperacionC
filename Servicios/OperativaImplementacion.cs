@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace EduRecuperacionC.Servicios
 {
+    /// <summary>
+    /// clase que contiene la operativa del proyecto
+    /// </summary>
     internal class OperativaImplementacion : OperativaInterfaz
     {
         public void darAltaAlumno()

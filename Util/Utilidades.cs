@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace EduRecuperacionC.Util
 {
+    /// <summary>
+    /// clase de utilidades
+    /// </summary>
     internal static class Utilidades
     {
+        /// <summary>
+        /// metodo que crea el nombre del fichero log
+        /// </summary>
+        /// <returns>el nombre completo del fichero</returns>
         public static  string crearNombreLog()
         {
             string nombreCompletoFichero="9";

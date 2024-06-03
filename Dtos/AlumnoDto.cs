@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EduRecuperacionC.Dtos
 {
+    /// <summary>
+    /// Clase de la entidad alumno
+    /// </summary>
     internal class AlumnoDto
     {
         //Atributos
