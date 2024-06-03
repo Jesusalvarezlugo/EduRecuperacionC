@@ -9,5 +9,7 @@ namespace EduRecuperacionC.Servicios
     internal interface MenuInterfaz
     {
         public int mostarMenuYSeleccion();
+
+        public int menuCampos();
     }
 }

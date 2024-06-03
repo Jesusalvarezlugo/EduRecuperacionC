@@ -14,6 +14,7 @@ namespace EduRecuperacionC.Servicios
     /// </summary>
     internal class FicheroImplementacion : FicheroInterfaz
     {
+        
         public void escribirFicheroLog(string texto)
         {
             StreamWriter escritor = null;
@@ -49,6 +50,36 @@ namespace EduRecuperacionC.Servicios
             }
 
             escritor.Close();
+        }
+
+        public void cargaInicial()
+        {
+            try
+            {
+                string[] lineas = File.ReadAllLines(Program.rutaFicheroLog);
+                foreach(string linea in lineas)
+                {
+                    String[] alum = linea.Split(";");
+                    AlumnoDto alumno = new AlumnoDto();
+                    alumno.DniAlumno = alum[0];
+                    alumno.NombreAlumno = alum[1];
+                    alumno.Apellido1Alumno = alum[2];
+                    alumno.Apellido2Alumno = alum[3];
+                    alumno.DireccionAlumno = alum[4];
+                    alumno.TelefonoAlumno = alum[5];
+                    alumno.EmailAlumno = alum[6];
+                    alumno.FchNacimiento = Convert.ToDateTime(alum[7]);
+
+                    Program.listaAlumnos.Add(alumno);
+                }
+            }
+            catch(IOException e)
+            {
+                Console.WriteLine("Error al leer las listas.");
+            }
+            
+
+
         }
     }
 }

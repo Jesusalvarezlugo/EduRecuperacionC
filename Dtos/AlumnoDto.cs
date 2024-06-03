@@ -21,6 +21,7 @@ namespace EduRecuperacionC.Dtos
         string direccionAlumno = "aaaaa";
         string telefonoAlumno = "aaaaa";
         string emailAlumno = "aaaaa";
+        DateTime fchNacimiento= DateTime.Now;
 
         //Getters y Setters
         public long IdAlumno { get => idAlumno; set => idAlumno = value; }
@@ -31,6 +32,7 @@ namespace EduRecuperacionC.Dtos
         public string DireccionAlumno { get => direccionAlumno; set => direccionAlumno = value; }
         public string TelefonoAlumno { get => telefonoAlumno; set => telefonoAlumno = value; }
         public string EmailAlumno { get => emailAlumno; set => emailAlumno = value; }
+        public DateTime FchNacimiento { get => fchNacimiento; set => fchNacimiento = value; }
 
         override
             public string ToString()
@@ -41,9 +43,9 @@ namespace EduRecuperacionC.Dtos
 
         public string ToString(char puntoYComa)
         {
-            //Dni;Nombre
+            //Dni;Nombre <-- orden obligatorio
             
-            string texto=String.Concat(this.dniAlumno,puntoYComa,this.nombreAlumno);
+            string texto=String.Concat(this.dniAlumno,puntoYComa,this.nombreAlumno,puntoYComa,this.apellido1Alumno,puntoYComa,this.apellido2Alumno,puntoYComa,this.direccionAlumno,puntoYComa,this.telefonoAlumno,puntoYComa,this.emailAlumno,puntoYComa,this.fchNacimiento);
             return texto;
         }
     }

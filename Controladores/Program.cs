@@ -25,6 +25,7 @@ namespace EduRecuperacionC.Controladores
             OperativaInterfaz oi=new OperativaImplementacion();
             int opcion;
             bool cerrarMenu = true;
+            fi.cargaInicial();
 
             do
             {
@@ -60,6 +61,11 @@ namespace EduRecuperacionC.Controladores
                         case 3:
                             fi.escribirFicheroLog("[INFO] Se escribira en fichero los alumnos .");
                             fi.listarAlumnosEnFichero();
+                            break;
+
+                        case 4:
+                            fi.escribirFicheroLog("[INFO] Se modificara un campo del alumno .");
+                            oi.modificarAlumno();
                             break;
 
                         default:

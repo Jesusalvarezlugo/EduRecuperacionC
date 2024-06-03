@@ -20,5 +20,14 @@ namespace EduRecuperacionC.Servicios
         /// Metodo para escribir en fichero la lista de los alumnos
         /// </summary>
         public void listarAlumnosEnFichero();
+
+        ///<summary>
+        ///Metodo para hacer la carga inicial de un fichero
+        /// </summary>
+
+        public void cargaInicial();
+
+
+
     }
 }
